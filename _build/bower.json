@@ -1,0 +1,29 @@
+{
+  "name": "gruntorgulp",
+  "version": "1.0.0",
+  "authors": [
+    "JP DeVries <mail@devries.jp>"
+  ],
+  "license": "MIT",
+  "homepage": "http://devries.jp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bourbon": "~4.2.6",
+    "neat": "~1.7.2"
+  },
+  "exportsOverride": {
+    "bourbon": {
+      "": "app/assets/stylesheets/"
+    },
+    "neat": {
+      "": "app/assets/stylesheets/"
+    }
+  }
+}
