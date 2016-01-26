@@ -55,9 +55,23 @@ module.exports = function(grunt) {
           livereload: false
         },
       files: '<%= dirs.scss %>**/*.scss',
-      tasks: ['sass:dev', 'growl:sass']
+      tasks: ['sass','cssmin', 'growl:sass']
       }
-    }
+    },
+    growl: { /* optional growl notifications requires terminal-notifer: gem install terminal-notifier */
+			sass: {
+				message: "Sass files created.",
+				title: "grunt"
+			},
+			build: {
+				title: "grunt",
+				message: "Build complete."
+			},
+			watch: {
+				title: "grunt",
+				message: "Watching. Grunt has its eye on you."
+			}
+		}
   };
 
   grunt.initConfig(initConfig);
@@ -67,8 +81,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-growl');
 
-  grunt.registerTask('build',['bower','copy','sass','cssmin','clean']);
+  grunt.registerTask('default','watch','growl:watch');
+  grunt.registerTask('build',['bower','copy','sass','cssmin','clean','growl:build']);
 
 };
