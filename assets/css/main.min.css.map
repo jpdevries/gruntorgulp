@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGE,IAAK;EACH,UAAU,EAAE,UAAU;;;AAItB,sBAEU;EACR,UAAU,EAAE,OAAO;;;ACRzB,QAAS;EC6BP,SAAS,ECRC,IAAQ;EDUhB,WAAI,EAAE,IAAI;EACV,YAAK,EAAE,IAAI;;AEhBb,eAAS;EACP,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,EAAE;EACX,OAAO,EAAE,KAAK",
-"sources": ["../../_build/scss/neat/grid/_box-sizing.scss","../../_build/scss/main.scss","../../_build/scss/neat/grid/_outer-container.scss","../../_build/scss/neat/settings/_grid.scss","../../_build/scss/bourbon/addons/_clearfix.scss"],
-"names": [],
-"file": "main.min.css"
-}
