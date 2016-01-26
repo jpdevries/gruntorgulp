@@ -3,6 +3,8 @@ bower_components
 
 .sass-cache
 
+_build/lib
+
 _build/scss/bourbon
 _build/scss/neat
 
